@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog — Irito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><span class="mono">Irito</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="blog-intro">
+      <h1>Blog</h1>
+      <p class="tagline">Browse posts — toggle layouts and filter by category.</p>
+
+      <div class="controls">
+        <div class="categories">
+          <button class="cat-btn active" data-cat="all">All</button>
+          <button class="cat-btn" data-cat="Electronics">Electronics</button>
+          <button class="cat-btn" data-cat="Anime">Anime</button>
+          <button class="cat-btn" data-cat="Tech">Tech</button>
+        </div>
+
+        <div class="view-toggle">
+          <button id="gridView" class="icon active" aria-pressed="true">Grid</button>
+          <button id="listView" class="icon" aria-pressed="false">List</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="posts-section">
+      <div id="posts" class="grid posts-grid">
+        <!-- Duplicate card markup or generate server-side/build. Examples below -->
+        <article class="card" data-category="Electronics">
+          <a href="post-example.html" class="card-link">
+            <div class="card-body">
+              <div class="card-meta"><span class="badge">Electronics</span> · <time datetime="2025-10-24">Oct 24, 2025</time></div>
+              <h3 class="card-title">Building a Minimal ESP32 Power Switch</h3>
+              <p class="card-excerpt">A short walkthrough of a compact ESP32-based smart switch with timed schedules and low power mode.</p>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year2"></span> Irito</div>
+      <div class="socials"><a href="#">Twitter</a><a href="#">GitHub</a></div>
+    </div>
+  </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

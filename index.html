@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Irito — Electronics & Japanese Culture</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <!-- Ganti logo-placeholder dengan logo asli -->
+      <img src="img/logo.png" alt="Irito logo" class="site-logo">
+      <span class="brand-text"><span class="mono">Irito</span></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Irito</h1>
+        <p class="tagline">Exploring electronics & Japanese culture — experiments, notes, and reviews.</p>
+        <div class="hero-actions">
+          <a class="btn" href="blog.html">Browse Posts</a>
+          <a class="btn ghost" href="about.html">About Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent">
+      <h2 class="section-title">Recent posts</h2>
+      <div class="grid posts-grid" id="recent-posts">
+        <!-- Sample post cards -->
+        <article class="card">
+          <a href="post-example.html" class="card-link">
+            <div class="card-body">
+              <div class="card-meta"><span class="badge">Electronics</span> · <time datetime="2025-10-24">Oct 24, 2025</time></div>
+              <h3 class="card-title">Building a Minimal ESP32 Power Switch</h3>
+              <p class="card-excerpt">A short walkthrough of a compact ESP32-based smart switch with timed schedules and low power mode.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="#" class="card-link">
+            <div class="card-body">
+              <div class="card-meta"><span class="badge">Anime</span> · <time datetime="2025-10-10">Oct 10, 2025</time></div>
+              <h3 class="card-title">Cyberpunk Aesthetics in Modern Anime</h3>
+              <p class="card-excerpt">Notes and recommendations for shows that nail the night-city neon look.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="#" class="card-link">
+            <div class="card-body">
+              <div class="card-meta"><span class="badge">Tech</span> · <time datetime="2025-09-30">Sep 30, 2025</time></div>
+              <h3 class="card-title">Benchmarks: SBCs for Embedded Projects</h3>
+              <p class="card-excerpt">Comparing small single-board computers for low-power robotics and IoT.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-preview">
+      <h2 class="section-title">About</h2>
+      <div class="about-cards">
+        <div class="mini-card">
+          <h4>Electronics</h4>
+          <p>DIY projects, schematics, and component deep dives.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Anime & Culture</h4>
+          <p>Reviews, cultural notes, and visual inspirations from Japan.</p>
+        </div>
+        <div class="mini-card">
+          <h4>Technology</h4>
+          <p>Tools, experiments, and readings on embedded systems & more.</p>
+        </div>
+      </div>
+      <div class="more-link">
+        <a class="btn ghost" href="about.html">Read more</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Irito — Built for curiosity</div>
+      <div class="socials">
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

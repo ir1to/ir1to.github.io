@@ -1,0 +1,146 @@
+:root{
+  --bg:#0a0a0a;
+  --panel:#111111;
+  --muted:#1b1b1b;
+  --text:#e8e8e8;
+  --muted-text:#b8b8b8;
+  --accent-1:#4a90c8;
+  --accent-2:#6eb5d8;
+  --border: #202020;
+  --radius:12px;
+  --duration:0.28s;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  -webkit-font-feature-settings: "liga" 0;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:28px}
+
+/* header */
+.site-header{
+
+  /* === Logo + Brand Enhancements === */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: opacity var(--duration);
+}
+
+.brand:hover {
+  opacity: 0.9;
+}
+
+.site-logo {
+  height: 42px; /* ukuran ideal untuk navbar */
+  width: auto;
+  border-radius: 10px; /* halus di tepi */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45); /* lembut tapi tetap elegan */
+  transition: transform var(--duration), box-shadow var(--duration);
+}
+
+.site-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.brand-text .mono {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.4rem;
+  letter-spacing: 0.6px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .site-logo {
+    height: 34px;
+  }
+  .brand-text .mono {
+    font-size: 1.1rem;
+  }
+}
+
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  position:sticky;top:0;z-index:10;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.brand .mono{font-family:'Space Mono', monospace;font-weight:700;letter-spacing:0.6px}
+.logo-placeholder{width:36px;height:36px;border-radius:6px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));display:inline-block}
+
+/* nav */
+.nav a{color:var(--muted-text);text-decoration:none;margin-left:18px;padding:8px;border-radius:8px;transition:color var(--duration),background var(--duration)}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
+.nav a.active{color:var(--text);background:rgba(74,144,200,0.06)}
+
+/* hero */
+.hero{padding:56px 0;display:flex;align-items:center;min-height:40vh}
+.hero-inner h1{font-family:'Space Mono',monospace;font-size:44px;margin:0 0 8px}
+.tagline{color:var(--muted-text);max-width:720px;margin:0 0 18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#06121b;text-decoration:none;font-weight:600;transition:transform var(--duration)}
+.btn.ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
+.btn:hover{transform:translateY(-3px)}
+
+/* sections */
+.section-title{font-size:18px;margin:18px 0 10px;color:var(--text)}
+.posts-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:18px}
+@media(min-width:720px){.posts-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.posts-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* card */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:transform var(--duration),box-shadow var(--duration)}
+.card:hover{transform:translateY(-8px);box-shadow:0 8px 30px rgba(0,0,0,0.6);border-color:var(--accent-1)}
+.card-body{padding:16px}
+.card-title{margin:6px 0 8px;font-family:'Space Mono',monospace}
+.card-excerpt{color:var(--muted-text);font-size:14px;margin:0}
+.card-meta{font-size:12px;color:var(--muted-text);margin-bottom:8px;display:flex;gap:8px;align-items:center}
+.badge{background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:999px;border:1px solid var(--border);font-size:12px;color:var(--text)}
+
+/* list view adjustments */
+.list-view .posts-grid{grid-template-columns:1fr}
+.list-view .card{display:flex;gap:16px}
+.list-view .card-body{flex:1}
+
+/* about-mini */
+.about-cards{display:flex;flex-direction:column;gap:12px}
+@media(min-width:800px){.about-cards{flex-direction:row}}
+.mini-card{background:var(--panel);padding:14px;border-radius:10px;border:1px solid var(--border)}
+
+/* footer */
+.site-footer{border-top:1px solid var(--border);margin-top:48px;padding:24px 0;color:var(--muted-text)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+
+/* post page */
+.post-page{padding-top:18px}
+.post-header .card-meta{margin-bottom:12px}
+.post h1{font-family:'Space Mono',monospace;font-size:30px}
+
+/* contact cards */
+.contact-cards{display:flex;flex-direction:column;gap:12px}
+.contact-card{display:block;padding:14px;border-radius:10px;background:var(--panel);text-decoration:none;color:var(--text);border:1px solid var(--border);transition:transform var(--duration)}
+.contact-card:hover{transform:translateY(-6px);border-color:var(--accent-2)}
+
+/* utilities */
+.tagline, p { color:var(--muted-text) }
+.back{display:inline-block;margin:12px 0;color:var(--muted-text);text-decoration:none}
+
+/* small helpers */
+.icon{background:transparent;border:1px solid var(--border);padding:8px;border-radius:8px;color:var(--muted-text);cursor:pointer;transition:all var(--duration)}
+.icon.active{background:rgba(74,144,200,0.06);color:var(--text)}
+.controls{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0}
+.cat-btn{background:transparent;border:1px solid var(--border);padding:8px 10px;border-radius:8px;color:var(--muted-text);cursor:pointer;transition:all var(--duration)}
+.cat-btn.active{background:rgba(74,144,200,0.06);color:var(--text);border-color:var(--accent-1)}
