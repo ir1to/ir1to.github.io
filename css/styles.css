@@ -147,3 +147,50 @@ body{
       0 0 80px rgba(0, 140, 255, 0.4);
   }
 }
+
+/* === Enhanced Footer with Neon Icons === */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 48px;
+  padding: 24px 0;
+  color: var(--muted-text);
+  position: relative;
+  z-index: 5;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.icon-svg {
+  transition: all 0.25s ease;
+  vertical-align: middle;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted-text);
+  text-decoration: none;
+  margin-left: 16px;
+  transition: color var(--duration), transform var(--duration), text-shadow var(--duration);
+  position: relative;
+  z-index: 10;
+}
+
+.socials a:hover {
+  color: var(--accent-2);
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px var(--accent-2);
+}
+
+.socials a:hover .icon-svg {
+  color: var(--accent-2);
+  filter: drop-shadow(0 0 6px var(--accent-2));
+}
+
