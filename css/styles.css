@@ -144,3 +144,39 @@ body{
 .controls{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0}
 .cat-btn{background:transparent;border:1px solid var(--border);padding:8px 10px;border-radius:8px;color:var(--muted-text);cursor:pointer;transition:all var(--duration)}
 .cat-btn.active{background:rgba(74,144,200,0.06);color:var(--text);border-color:var(--accent-1)}
+
+/* hero */
+/* === Hero section neon glow === */
+.hero-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow:
+    0 0 10px rgba(0, 200, 255, 0.5),
+    0 0 30px rgba(0, 150, 255, 0.3),
+    0 0 60px rgba(0, 120, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: neonPulse 4s ease-in-out infinite;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px rgba(0, 220, 255, 0.8),
+    0 0 50px rgba(0, 170, 255, 0.6),
+    0 0 80px rgba(0, 140, 255, 0.5);
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(0, 200, 255, 0.5),
+      0 0 30px rgba(0, 150, 255, 0.3),
+      0 0 60px rgba(0, 120, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(0, 220, 255, 0.7),
+      0 0 50px rgba(0, 170, 255, 0.5),
+      0 0 80px rgba(0, 140, 255, 0.4);
+  }
+}
